@@ -6,13 +6,8 @@ class Solution {
         List<Integer> lst = new ArrayList<>();
         
         for(int i =0; i < s.length();i++){
-            if(!tmp.contains(s.charAt(i))){
-                tmp.push(s.charAt(i));
-                lst.add(-1);
-            }else{
                 lst.add(tmp.search(s.charAt(i)));
                 tmp.push(s.charAt(i));
-            }
         }
         
         for(int i =0; i< lst.size();i++){
