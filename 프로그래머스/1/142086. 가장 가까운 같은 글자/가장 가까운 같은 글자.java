@@ -2,21 +2,21 @@ import java.util.*;
 class Solution {
     public int[] solution(String s) {
         int[] answer = new int[s.length()];
-        Stack<Character> stack = new Stack<>();
-        List<Integer> numlst = new ArrayList<>();
+        Stack<Character> tmp = new Stack<>();
+        List<Integer> lst = new ArrayList<>();
         
-        for(int i = 0; i<s.length();i++){
-            if(!stack.contains(s.charAt(i))){
-                stack.push(s.charAt(i));
-                numlst.add(-1);
+        for(int i =0; i < s.length();i++){
+            if(!tmp.contains(s.charAt(i))){
+                tmp.push(s.charAt(i));
+                lst.add(-1);
             }else{
-                numlst.add(stack.search(s.charAt(i)));
-                stack.push(s.charAt(i));
+                lst.add(tmp.search(s.charAt(i)));
+                tmp.push(s.charAt(i));
             }
         }
-     
-        for(int i = 0; i<answer.length;i++){
-            answer[i] = numlst.get(i);
+        
+        for(int i =0; i< lst.size();i++){
+            answer[i] = lst.get(i);
         }
         return answer;
     }
