@@ -19,6 +19,7 @@ class Solution {
                 stack2.pop();
             }else{
                 answer ="No";
+                break;
             }
         }
         
