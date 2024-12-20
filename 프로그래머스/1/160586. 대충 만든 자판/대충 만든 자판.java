@@ -8,9 +8,9 @@ class Solution {
         for (String each:keymap){
             for(int i =0; i<each.length();i++){
                 char c = each.charAt(i);
-                //key와 맵핑된 value값을 반환하고 없으면 defaultValue값을 반환합니다.
+                //key와 맵핑된 value값을 반환하고 없으면 defaultValue값을 반환
                 int val = map.getOrDefault(c, i+1);
-                //put(K key, V value) : key와 value를 저장합니다. 
+                //put(K key, V value) : key와 value를 저장
                 map.put(c, Math.min(val, i+1));
             }
         }
@@ -19,7 +19,7 @@ class Solution {
             for(int j = 0; j<targets[i].length(); j++){
                 char c = targets[i].charAt(j);
                 if(map.containsKey(c)){
-                    // get(Object key) : key와 맵핑된 value값을 반환합니다
+                    // get(Object key) : key와 맵핑된 value값을 반환
                     answer[i] += map.get(c);
                 }else{
                     answer[i] = -1;
