@@ -9,16 +9,16 @@ class Solution {
             if(i < 8){
                 if(i == 2){
                     totalDay += 29;
-                }else if(i % 2 != 0){
-                    totalDay += 31;
-                }else{
+                }else if(i % 2 == 0){
                     totalDay += 30;
+                }else{
+                    totalDay += 31;
                 }
             }else{
-                if(i % 2 !=0){
-                    totalDay += 30;
-                }else{
+                if(i % 2 ==0){
                     totalDay += 31;
+                }else{
+                    totalDay += 30;
                 }
             }
         }
